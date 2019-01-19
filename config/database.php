@@ -112,7 +112,7 @@ return [
             'host' => env('REDIS_HOST', '192.168.1.189'),
             'password' => env('REDIS_PASSWORD', 'accgame'),
             'port' => env('REDIS_PORT', 6379),
-            'database' => env('REDIS_DB', 5),
+            'database' => env('REDIS_DB', 4),
         ],
         'session' => [
             'host' => env('REDIS_HOST', '192.168.1.189'),
