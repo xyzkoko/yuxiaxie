@@ -8,6 +8,6 @@ return [
     'sava_uri' => '/data/wwwroot/dx/public/photo',
 
     // 图片访问地址
-    'visit_uri' => 'http://140.143.168.189/dx/public/photo',
+    'visit_uri' => 'http://140.143.168.189/yxx/public/photo',
 
 ];
