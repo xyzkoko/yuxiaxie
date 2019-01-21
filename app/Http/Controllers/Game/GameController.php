@@ -98,7 +98,6 @@ class GameController extends Controller
         $gameId = $date . '|' . $num;
         $gameCards = GameCards::find($gameId)->toArray();
         $dice = json_decode($gameCards['cards'],true);
-        $dice[] = array_sum($dice);
         $data['dice'] = implode(",",$dice);
         $data['gameId'] = $gameId;
         $data['nextGameId'] = $nextGameId;
