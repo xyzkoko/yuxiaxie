@@ -56,7 +56,7 @@ class GameController extends Controller
         for ($i = 1; $i <= 720; $i++) {
             $gameCards = new GameCards;
             $gameCards->id = $data . '|' . sprintf("%03d", $i);       // 补齐3位;
-            $gameCards->cards = json_encode(array(rand(1, 6), rand(1, 6), rand(1, 6)));
+            $gameCards->cards = json_encode(array(rand(1, 3), rand(1, 3), rand(1, 3)));
             $gameCards->close_time = $closeTime * 1000;
             $gameCards->save();
             $closeTime += 120;
@@ -72,7 +72,7 @@ class GameController extends Controller
         for ($i = 1; $i <= 720; $i++) {
             $gameCards = new GameCards;
             $gameCards->id = $data . '|' . sprintf("%03d", $i);       // 补齐3位;
-            $gameCards->cards = json_encode(array(rand(1, 6), rand(1, 6), rand(1, 6)));
+            $gameCards->cards = json_encode(array(rand(1, 3), rand(1, 3), rand(1, 3)));
             $gameCards->close_time = $closeTime * 1000;
             $gameCards->save();
             $closeTime += 120;

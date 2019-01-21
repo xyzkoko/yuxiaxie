@@ -58,7 +58,7 @@ class AdminController extends Controller
         $dice = $request->input('cards');
         $dice = json_decode($dice, true);
         for ($i = 0; $i < count($dice); $i++) {       // 判断数量
-            if (count($dice) != 3 || $dice[$i] < 1 || $dice[$i] > 6) {
+            if (count($dice) != 3 || $dice[$i] < 1 || $dice[$i] > 3) {
                 $response->result = false;
                 $response->message = "参数错误!";
                 return json_encode($response);
