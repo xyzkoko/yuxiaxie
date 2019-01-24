@@ -33,7 +33,7 @@ class GameController extends Controller
         $gameInfo['startTime'] = UserController::getMillisecond();
         $gameInfo['status'] = 0;
         Redis::set($gameKey, json_encode($gameInfo));            // 更新Redis
-        sleep(100);      // 等待
+        sleep(110);      // 等待
         // 结算阶段
         $gameCards = GameCards::find($gameId);
         $gameInfo['dice'] = $gameCards["cards"];
