@@ -47,7 +47,7 @@ class UserController extends Controller
     }
 
     /*保存玩家头像*/
-    /*public static function saveUserIcon(Request $request)
+    public static function saveUserIcon(Request $request)
     {
         $response = new ResponseData();
         $savaUri = config('headimgurl.sava_uri');
@@ -75,7 +75,7 @@ class UserController extends Controller
             return json_encode($response);
         }
         if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $imgBase64Code, $result)) {
-            $new_file = "{$savaUri}/daxiao_{$uid}.png";
+            $new_file = "{$savaUri}/yuxiaxie_{$uid}.png";
             file_put_contents($new_file, base64_decode(str_replace($result[1], '', $imgBase64Code)));
         } else {
             $response->data = "error2";
@@ -87,7 +87,7 @@ class UserController extends Controller
             $userInfo = new UserInfo();
             $userInfo->openid = $uid;
             $userInfo->nickname = "nickname";
-            $userInfo->headimgurl = "{$visitUri}/daxiao_{$uid}.png";
+            $userInfo->headimgurl = "{$visitUri}/yuxiaxie_{$uid}.png";
             $userInfo->sex = "0";
             $userInfo->province = "province";
             $userInfo->city = "city";
@@ -95,5 +95,5 @@ class UserController extends Controller
         }
         $response->data = $userInfo;
         return json_encode($response);
-    }*/
+    }
 }
